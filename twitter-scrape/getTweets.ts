@@ -8,14 +8,16 @@ const twitterClient = new TwitterClient({
   accessTokenSecret: '<YOUR-TWITTER-ACCESS-TOKEN-SECRET>',
 });
 
-// Search for a user
-const data = await twitterClient.accountsAndUsers.usersSearch({ q: 'twitterDev' });
+const getTweets = async () => {
+    // // Search for a user
+    // const data = await twitterClient.accountsAndUsers.usersSearch({ q: 'twitterDev' });
 
-// Get message event by Id
-const data = await twitterClient.directMessages.directMessagesEventsShow({ id: '1234' });
+    // // Get message event by Id
+    // const data = await twitterClient.directMessages.directMessagesEventsShow({ id: '1234' });
 
-// Get most recent 25 retweets of a tweet
-const data = await twitterClient.tweets.statusesRetweetsById({ id: '12345', count: 25 });
+    // Get most recent 25 retweets of a tweet
+    const data = await twitterClient.tweets.statusesRetweetsById({ id: '35749264', count: 25 });
 
-// Get local trends
-const data = await twitterClient.trends.trendsAvailable();
+    // // Get local trends
+    // const data = await twitterClient.trends.trendsAvailable();
+}
