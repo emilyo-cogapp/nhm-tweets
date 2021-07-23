@@ -1,3 +1,4 @@
+require('dotenv').config();
 import { TwitterClient } from 'twitter-api-client';
 
 const twitterClient = new TwitterClient({
